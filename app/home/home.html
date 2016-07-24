@@ -1,0 +1,13 @@
+<div class="row col-md-10 main-container">
+    <div class="col-md-4 col-sm-12" ng-repeat="act in activities">
+        <div class="desc" style="background-image: url('{{act.picUrls[0]}}')">
+            <div class="icons">
+                <div class="icon" ng-repeat="user in act.attendees">
+                    <img class="img-rounded" ng-src="{{user.iconUrl}}" alt="{{user.userName}}">
+                </div>
+            </div>
+            <h3><a href="#!/detail/{{act._id}}" >{{act.title}}</a></h3>
+            <p class="text-muted">{{act.desc}}</p>
+        </div>
+    </div>
+</div>
